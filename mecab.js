@@ -26,7 +26,7 @@ var MeCab = (function(){
     // so we don't have to attach new listeners each time instead
     _wrapper: null,
 
-    // Main function, only one exported
+    // Main function, the only one exported
     // text: the text you want to parse
     // format: the name of the dictionary your mecab is using, must match a key in the formats object
     // callback: your callback
