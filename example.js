@@ -5,11 +5,14 @@
 // License: MIT
 // By Kim Ahlström <kim.ahlstrom@gmail.com> 2010
 
+var path = require('path');
+require.paths.unshift(path.join(__dirname, 'lib'));
+
 var sys = require('sys'), 
     http = require('http'),
     url = require('url'),
     querystring = require('querystring'),
-		mecab = require('./mecab');
+		mecab = require('mecab');
 
 http.createServer(function (req, res) {
   res.sendHeader(200, {'Content-Type': 'text/plain; charset=utf-8'});
