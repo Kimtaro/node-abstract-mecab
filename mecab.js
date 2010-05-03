@@ -5,7 +5,8 @@
 //
 // Tested with node.js version 0.1.91
 //
-// By Kim Ahlström <kim.ahlstrom@gmail.com> May 2010
+// License: MIT
+// By Kim Ahlström <kim.ahlstrom@gmail.com> 2010
 
 var spawn = require('child_process').spawn;
 
@@ -33,7 +34,7 @@ var MeCab = (function(){
       // Attach this function as the actual callback for the data from the mecab child process listener
       // This is so we can have a new user callback for each time parse is called without having to redefine the mecab listener
       MeCab._wrapper = function(data){
-        // data is a buffer, so we need to stringify the buffer
+        // data is a buffer, so we need to stringify it
         var string = data.toString('utf8', 0, data.length);
         
         // This turns the mecab output into a nice object

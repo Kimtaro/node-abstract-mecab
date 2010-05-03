@@ -1,8 +1,9 @@
 // Example of using the mecab module in a node.js server
 //
-// Parses the path after / with mecab and shows JSON serialized output
+// Parses the text parameter with mecab and shows JSON serialized output
 //
-// By Kim Ahlström <kim.ahlstrom@gmail.com> May 2010
+// License: MIT
+// By Kim Ahlström <kim.ahlstrom@gmail.com> 2010
 
 var sys = require('sys'), 
     http = require('http'),
@@ -13,6 +14,7 @@ var sys = require('sys'),
 http.createServer(function (req, res) {
   res.sendHeader(200, {'Content-Type': 'text/plain; charset=utf-8'});
   req.setEncoding('utf8');
+  
   // Need this querystring and url parsing to decode the URL encoding
   var query = querystring.parse(url.parse(req.url).query)
   var text = query.text;
