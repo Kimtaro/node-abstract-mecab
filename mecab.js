@@ -34,7 +34,7 @@ var MeCab = (function(){
       // This is so we can have a new user callback for each time parse is called without having to redefine the mecab listener
       MeCab._wrapper = function(data){
         // data is a buffer, so we need to stringify the buffer
-        var string = data.toString('utf8', 0, data.length)
+        var string = data.toString('utf8', 0, data.length);
         
         // This turns the mecab output into a nice object
         var parsed = MeCab.formats[format](string);
@@ -76,7 +76,7 @@ var MeCab = (function(){
             pattern: features[5],
             lemma: features[6],
             reading: features[7],
-            pronunciation: features[8],
+            pronunciation: features[8]
           });
         }
         
