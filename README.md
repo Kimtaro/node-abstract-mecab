@@ -4,6 +4,8 @@ This module lets you use the Japanese morphological analyzer MeCab from node.js 
 
 It parses MeCab's stdout into javascript objects that gives you access to the information MeCab provides, as opposed to a direct interface to the underlying C API. So far it only parses the recommended standard MeCab output format.
 
+Note that this is still very much work in progress, and there are still issues with long input.
+
 MeCab homepage: http://mecab.sourceforge.net/
 
 ## Usage:
