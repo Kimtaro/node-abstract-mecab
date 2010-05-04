@@ -22,7 +22,7 @@ http.createServer(function (req, res) {
   var query = querystring.parse(url.parse(req.url).query)
   var text = query.text;
     
-  mecab.parse(text, 'ipadic', function(output){
+  mecab.parse(text, function(output){
     res.write('mecab: '+JSON.stringify(output));  
     res.end();
   });
